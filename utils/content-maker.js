@@ -53,7 +53,7 @@ Description text.
 
 ## Table of Contents
 
-- [Installation](#instllation)
+- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
@@ -70,7 +70,7 @@ Usage text.
 
 ## License
 
-See the [LICENSE](./LICENSE) file for license rights and limitations.
+See the [license](./LICENSE) file for license rights and limitations.
 
 ## Contributing
 

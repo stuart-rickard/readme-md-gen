@@ -6,7 +6,7 @@ Description text.
 
 ## Table of Contents
 
-- [Installation](#instllation)
+- [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
