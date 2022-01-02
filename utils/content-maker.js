@@ -1,4 +1,44 @@
-  // const generateProjects = projectsArr => {
+let tableOfContents = {
+  installation: `- [Installation](#installation)
+  `,
+  usage: `- [Usage](#usage)
+  `,
+  license: `- [License](#license)
+  `,
+  contributing: `- [Contributing](#contributing)
+  `,
+  tests: `- [Tests](#tests)
+  `,
+  questions: `- [Questions](#questions)
+  `
+};
+
+const updateToc = userResponses => {
+  if (!userResponses.installation) { tableOfContents.installation = '' };
+  if (!userResponses.usage) { tableOfContents.usage = '' };
+  // The license item in the TOC is handled by licenseBadgeCreate
+  if (!userResponses.contributing) { tableOfContents.contributing = '' };
+  if (!userResponses.testing) { tableOfContents.tests = '' };
+  if (!(userResponses.gitHubUsername || userResponses.email || userResponses.questions)) { tableOfContents.questions = '' };
+}
+
+const licenseBadgeCreate = licenseType => {
+  switch (licenseType) {
+    case 'Do Not Show License':
+      tableOfContents.license = '';
+      return '';
+    case 'Apache License 2.0':
+      return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+    case 'GNU General Public License v3.0':
+      return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+    case 'MIT License':
+      return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+    case 'Other License':
+      return '';
+  }
+}
+
+// const generateProjects = projectsArr => {
   //   return `
   //     <section class="my-3" id="portfolio">
   //       <h2 class="text-dark bg-primary p-2 display-inline-block">Work</h2>
@@ -41,24 +81,19 @@
   //   `;
   // };
 
-module.exports = templateData => {
+module.exports = userResponses => {
     // destructure page data by section
     // const { projects, about, ...header } = templateData;
-  
-    return `# Project Name
+  updateToc(userResponses);
+  return `# ${userResponses.projectName}
 
-Description text.
+${userResponses.projectDescription}
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+${licenseBadgeCreate(userResponses.licenseType)}
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+${tableOfContents.installation}${tableOfContents.usage}${tableOfContents.license}${tableOfContents.contributing}${tableOfContents.tests}${tableOfContents.questions}
 
 ## Installation
 
