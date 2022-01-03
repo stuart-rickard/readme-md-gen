@@ -1,13 +1,12 @@
-# lkj;
+# lkjlj
 
-;ljk;kj
+lkjlkjl
+    
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Table of Contents
 
 - [Installation](#installation)
-  
 - [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
@@ -16,26 +15,31 @@
 
 ## Installation
 
-Installation text.
-
+INSTALL
+    
 ## Usage
 
-Usage text.
-
+USAGE
+    
 ## License
 
-See the [license](./LICENSE) file for license rights and limitations.
+This project is licensed.
+
+See the [license](./model/LICENSE) file for license rights and limitations.
 
 ## Contributing
 
-Contribution guidelines text.
-
+contribute
+    
 ## Tests
 
-Test instructions text.
-
+testing
+    
 ## Questions
-
+        
 My GitHub username is stuart-rickard; my profile is [here](https://github.com/stuart-rickard).
 
 Additional questions?: my email address is stuart@bau-dev.com.
+
+additional text
+
