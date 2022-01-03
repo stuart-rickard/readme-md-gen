@@ -7,6 +7,7 @@ const promptUser = () => {
   `WELCOME TO THE README.md GENERATOR!
   Providing no response to a question will cause the deletion of the section where that response would appear.
   Use ^C at any time to quit.
+  Use <br> if you'd like to render a line break in your text.
   `;
   console.log(intro);
   return inquirer.prompt([

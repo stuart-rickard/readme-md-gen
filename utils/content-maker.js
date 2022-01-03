@@ -130,16 +130,32 @@ ${testingResponse}
 };
 
 const questionsSectionCreate = userResponses => {
-  const handleGitHubUsername = userName => `My GitHub username is ${userName}; my profile is [here](https://github.com/${userName}).
+  const handleGitHubUsername = userName => {
+    if (!userName) {
+      return '';
+    } else {
+      return `My GitHub username is ${userName}; my profile is [here](https://github.com/${userName}).
 
-`;
-  const handleEmailAddress = email => `Additional questions?: my email address is ${email}.
+`};
+    };
 
-`;
+  const handleEmailAddress = email => {
+    if (!email) {
+      return '';
+    } else {
+      return `Additional questions?: my email address is ${email}.
 
-  const handleQuestionsText = questionsText => `${questionsText}
+`};
+    };
 
-`;
+  const handleQuestionsText = questionsText => {
+    if (!questionsText) {
+      return '';
+    } else {
+      return `${questionsText}
+
+`};
+    };
 
   if (!(userResponses.githubUsername || userResponses.email || userResponses.questions)) {
     return '';
