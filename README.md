@@ -15,7 +15,7 @@ This is a challenge project for the UC Berkeley Extension Full-Stack Developer B
 
 ## Installation
 
-This project is not on npm, so the best way to download the project is through GitHub; specifically, download app.js in the root directory.  Additionally, you will need to install inquirer from npm using `npm i inquirer`.
+This project is not on npm, so the best way to download the project is through GitHub; specifically, download `app.js` in the root directory.  Additionally, you will need to install inquirer from npm using `npm i inquirer`.
     
 ## Usage
 
